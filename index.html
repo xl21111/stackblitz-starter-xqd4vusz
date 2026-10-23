@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="uk">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Практична: Список завдань (To-Do List)</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Мій список завдань</h1>
+
+      <!-- Форма для створення нового завдання -->
+      <form id="todo-form">
+        <input
+          type="text"
+          id="todo-input"
+          placeholder="Введіть нове завдання..."
+          required
+        />
+        <select id="priority-select">
+          <option value="low">Низький</option>
+          <option value="medium" selected>Середній</option>
+          <option value="high">Високий</option>
+        </select>
+        <button type="submit">Додати</button>
+      </form>
+
+      <!-- Лічильники завдань -->
+      <div class="counters">
+        <span>Всього завдань: <strong id="total-count">0</strong></span>
+        <span>Виконано: <strong id="completed-count">0</strong></span>
+      </div>
+
+      <!-- Список завдань -->
+      <ul id="todo-list"></ul>
+
+      <!-- Кнопка очищення виконаних -->
+      <button id="clear-completed" class="clear-btn">Очистити виконані</button>
+    </div>
+
+    <script src="scripts.js"></script>
+  </body>
+</html>
